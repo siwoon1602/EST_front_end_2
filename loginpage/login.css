@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:root {
+  --weniv--color: #2f80ed;
+  --body--color: #767676;
+  --title-color: #000000;
+}
+* {
+  font-family: "SpoqaHanSansNeo-Regular";
+}
+
+.mainbox {
+  width: 520px;
+  height: 712px;
+  border-radius: 10;
+  border: 1px solid #c4c4c4;
+  background-color: white;
+}
