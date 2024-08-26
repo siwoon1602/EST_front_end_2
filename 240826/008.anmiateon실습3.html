@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <style>
+      .container {
+        width: 200px;
+        height: 200px;
+        background-color: royalblue;
+        border-radius: 20%;
+        position: relative;
+      }
+
+      .sec {
+        background-color: black;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 80px;
+        border-bottom: 5px solid black;
+        animation-name: time;
+        animation-duration: 10s;
+        animation-timing-function: steps(60);
+        animation-iteration-count: infinite;
+      }
+      .min {
+        background-color: orange;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 80px;
+        border-bottom: 5px solid orange;
+        animation-name: time;
+        animation-duration: 100s;
+        animation-timing-function: steps(60);
+        animation-iteration-count: infinite;
+      }
+
+      .hour {
+        background-color: crimson;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80px;
+        border-bottom: 5px solid crimson;
+        animation-name: time;
+        animation-duration: 240s;
+        animation-timing-function: steps(60);
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes time {
+        from {
+          transform: rotate(0deg);
+          transform-origin: left;
+        }
+        to {
+          transform: rotate(1turn);
+          transform-origin: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article class="container">
+      <div class="sec"></div>
+      <div class="min"></div>
+      <div class="hour"></div>
+    </article>
+  </body>
+</html>
