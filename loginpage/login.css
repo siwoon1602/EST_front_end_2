@@ -33,4 +33,9 @@
   border-radius: 10;
   border: 1px solid #c4c4c4;
   background-color: white;
+  border-radius: 10px;
+}
+
+header {
+  display: flex;
 }
