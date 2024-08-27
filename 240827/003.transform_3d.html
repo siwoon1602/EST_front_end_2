@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .container {
+        perspective: 500px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .item {
+        background-color: cadetblue;
+        width: 200px;
+        height: 200px;
+        transition: all 1s;
+      }
+
+      .item:hover {
+        /* transform: translateZ(100px);
+        transform: rotateZ(45deg);
+        transform: rotateY(45deg);
+        transform: rotateZ(45deg); */
+        transform: scale3d(2, 2, 2);
+        transform: translateZ(100px) rotateX(45deg) rotateY(45deg)
+          rotateZ(45deg) scale3d(2, 2, 2);
+      }
+
+      .container2 > div {
+        width: 100px;
+        height: 100px;
+        background-color: royalblue;
+        margin-bottom: 20px;
+      }
+
+      .box1 {
+        transform: perspective(300px) scaleZ(1) rotateY(75deg);
+      }
+      .box2 {
+        transform: perspective(300px) scaleZ(1) rotateY(75deg);
+      }
+      .box3 {
+        transform: perspective(300px) scaleZ(1) rotateY(75deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>transform</h2>
+    <div class="container">
+      <div class="item">hover me</div>
+    </div>
+
+    <div class="container2">
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+    </div>
+  </body>
+</html>
