@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      @keyframes rotateX {
+        from {
+          transform: rotateY(0deg);
+        }
+        to {
+          transform: rotateY(360deg);
+        }
+      }
+
+      .container {
+        display: flex;
+        padding: 50px;
+        background-color: crimson;
+
+        /* 3D공간의 깊이를 설정 */
+        perspective: 500px;
+        /* 값이 낮아질수록 사용자와 가까워짐 */
+        perspective: 200px;
+      }
+
+      .item {
+        width: 150px;
+        height: 100px;
+        background-color: royalblue;
+        border: 1px solid black;
+        animation: rotateX 2s infinite linear;
+        /* transform: rotateY(80deg);
+        transform: rotateX(80deg); */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  </body>
+</html>
