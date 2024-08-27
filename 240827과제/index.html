@@ -7,13 +7,9 @@
     <title></title>
 
     <style>
-      .container {
-        padding: 156px 0 0 149px;
-      }
-
       main .img_box {
         display: flex;
-        position: relative;
+        align-items: center;
       }
 
       main button {
@@ -32,48 +28,57 @@
         border-radius: 10px;
         background-color: #2f80ed;
       }
-      .img_box:nth-child(2) {
-        background-image: 100;
+      .main {
+        display: flex;
+        width: auto;
       }
-
       .img_box img {
         border-radius: 10px;
-        box-shadow: 0, 0, 15px rgba(0, 0, 0, 0.3);
       }
-      .img_box img:nth-child(1),
-      .img_box img:nth-child(5) {
+      .img_box img:nth-child(2),
+      .img_box img:nth-child(6) {
         width: 289px;
         height: 289px;
         object-fit: contain;
         z-index: 100;
-        position: absolute;
       }
-      .img_box img:nth-child(2),
-      .img_box img:nth-child(4) {
+      .img_box img:nth-child(3),
+      .img_box img:nth-child(5) {
         width: 378px;
         height: 378px;
         object-fit: contain;
         z-index: 200;
-        position: absolute;
+      }
+      .img_box img:nth-child(4) {
+        z-index: 300;
+      }
+      .img_box img:nth-child(2) {
+        transform: translateX(280px);
       }
       .img_box img:nth-child(3) {
-        position: absolute;
-        z-index: 300;
+        transform: translateX(150px);
+      }
+
+      .img_box img:nth-child(5) {
+        transform: translateX(-150px);
+      }
+      .img_box img:nth-child(6) {
+        transform: translateX(-280px);
       }
     </style>
   </head>
   <body>
     <div class="container">
       <header><button type="button">이미지 업로드</button></header>
-      <main>
-        <button type="button" class="swipe">< Prev</button>
-        <button type="button" class="swipe">next ></button>
+      <main class="main">
         <div class="img_box">
+          <button type="button" class="swipe">< Prev</button>
           <img src="./images/img1.png" alt="" />
           <img src="./images/img2.png" alt="" />
           <img src="./images/img3.png" alt="" />
           <img src="./images/img4.png" alt="" />
           <img src="./images/img5.png" alt="" />
+          <button type="button" class="swipe">next ></button>
         </div>
       </main>
     </div>
