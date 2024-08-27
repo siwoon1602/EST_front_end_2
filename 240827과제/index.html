@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
   <head>
+    <link rel="stylesheet" href="./reset.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
 
-    <style></style>
+    <style>
+      .container {
+        padding: 156px 0 0 149px;
+      }
+
+      main .img_box {
+        display: flex;
+        position: relative;
+      }
+
+      main button {
+        width: 140px;
+        height: 62px;
+        border-radius: 36.5px;
+        border: 3px solid #828282;
+        background-color: white;
+      }
+
+      header button {
+        font-weight: 700;
+        padding: 14px 39px;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        background-color: #2f80ed;
+      }
+      .img_box:nth-child(2) {
+        background-image: 100;
+      }
+
+      .img_box img {
+        border-radius: 10px;
+        box-shadow: 0, 0, 15px rgba(0, 0, 0, 0.3);
+      }
+      .img_box img:nth-child(1),
+      .img_box img:nth-child(5) {
+        width: 289px;
+        height: 289px;
+        object-fit: contain;
+        z-index: 100;
+        position: absolute;
+      }
+      .img_box img:nth-child(2),
+      .img_box img:nth-child(4) {
+        width: 378px;
+        height: 378px;
+        object-fit: contain;
+        z-index: 200;
+        position: absolute;
+      }
+      .img_box img:nth-child(3) {
+        position: absolute;
+        z-index: 300;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -13,6 +68,13 @@
       <main>
         <button type="button" class="swipe">< Prev</button>
         <button type="button" class="swipe">next ></button>
+        <div class="img_box">
+          <img src="./images/img1.png" alt="" />
+          <img src="./images/img2.png" alt="" />
+          <img src="./images/img3.png" alt="" />
+          <img src="./images/img4.png" alt="" />
+          <img src="./images/img5.png" alt="" />
+        </div>
       </main>
     </div>
   </body>
