@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <style>
+      /* 너비 기반 미디어 쿼리 */
+      /* 화면의 너비가 640px이상이고 800px 이하일때만 적용 */
+      @media (min-width: 640px) and (max-width: 800px) {
+        body {
+          font-size: 4rem;
+        }
+      }
+      /* 화면너비가 800px 이상일때  */
+      @media not screen and (max-width: 800px) {
+        body {
+          background-color: rebeccapurple;
+        }
+      }
+
+      /* 방향 기반 미디어 쿼리*/
+      /* @media (orientation: landscape) {
+        body {
+          background-color: orange;
+        }
+      }
+      @media (orientation: portrait) {
+        body {
+          background-color: royalblue;
+        }
+      } */
+
+      @media (min-width: 700px), (orientation: landscape) {
+        body {
+          background-color: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    안녕하세요
+  </body>
+</html>
