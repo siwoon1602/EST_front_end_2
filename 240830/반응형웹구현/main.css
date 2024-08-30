@@ -33,7 +33,6 @@ body {
 }
 
 .item1 {
-  width: 613px;
   grid-area: a;
   margin-right: 102px;
 }
@@ -43,15 +42,20 @@ body {
   width: 486px;
   height: 280px;
   border-radius: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: url(./images/Rectangle\ 2.png);
+  position: relative;
 }
 
 .item3 {
-  grid-area: c;
   width: 486px;
   height: 280px;
+
+  grid-area: c;
   border-radius: 20px;
   background-image: url(./images/Rectangle\ 3.png);
+  position: relative;
 }
 
 .item2 h2,
@@ -60,7 +64,9 @@ body {
   font-size: 30px;
   line-height: 37.56px;
   font-weight: 700;
-  margin: 40px 0 0 40px;
+  position: absolute;
+  left: 40px;
+  top: 40px;
 }
 .item2 p,
 .item3 p {
@@ -68,7 +74,9 @@ body {
   font-size: 16px;
   line-height: 20.03px;
   font-weight: 400;
-  margin: 152px 0 0 373px;
+  position: absolute;
+  left: 373px;
+  top: 230px;
 }
 .item2 p::after,
 .item3 p::after {
@@ -95,9 +103,11 @@ body {
 }
 .item1 p:nth-child(3) span {
   font-weight: 400;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
 }
 
-/*  */
 @media (min-width: 768px) and (max-width: 1919px) {
   .main {
     display: grid;
@@ -105,23 +115,10 @@ body {
       "a a"
       "b c";
   }
+
   .item2,
   .item3 {
-    width: 344px;
-    height: 198px;
-    background-size: contain;
-  }
-  .item2 h2,
-  .item3 h2 {
-    font-size: 24px;
-    line-height: 20.03px;
-    font-weight: 700;
-    margin: 30px 0 0 30px;
-  }
-
-  .item2 p,
-  .item3 p {
-    margin: 100px 0 0 241px;
+    width: 100%;
   }
 }
 
@@ -133,40 +130,5 @@ body {
       "a "
       "b "
       "c";
-  }
-  .item2,
-  .item3 {
-    width: 356px;
-    height: 205px;
-    background-size: contain;
-  }
-  .item2 h2,
-  .item3 h2 {
-    font-size: 20px;
-    line-height: 25.04px;
-    font-weight: 700;
-    margin: 30px 0 0 30px;
-  }
-
-  .item2 p,
-  .item3 p {
-    font-size: 14px;
-    line-height: 17.53px;
-    margin: 110px 0 0 264px;
-  }
-  .item1 p:nth-child(2) {
-    width: 315px;
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 45.07px;
-    color: #121314;
-  }
-
-  .item1 p:nth-child(3) {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 20px;
-    color: #47494d;
-    margin-top: 20px;
   }
 }
