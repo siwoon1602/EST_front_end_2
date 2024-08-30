@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <style>
+      div {
+        background-color: orange;
+        width: calc(100% - 60px);
+        width: min(600px, 90%);
+        height: 200px;
+        margin: auto;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        list-style: none;
+        background-color: brown;
+        float: left;
+        width: calc((100% - (50px * 2)) / 3);
+        font-size: clamp(1rem, 2.5vw, 5rem);
+      }
+
+      li:not(:first-child) {
+        margin-left: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>hellow world</div>
+    <ul>
+      <li>1. 기상</li>
+      <li>2. 머리감고 양치</li>
+      <li>3. 커피 내리기</li>
+    </ul>
+  </body>
+</html>
