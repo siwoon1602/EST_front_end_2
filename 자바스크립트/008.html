@@ -20,13 +20,12 @@
       let str2 = "문자열2";
       let str3 = `문자열3`;
 
-      //I'm  o o .
-
-      srt1 = "문자열은 작음따옴표 ('') , 큰따옴포 (\"\"), 백틱\n\t으로";
+      // I'm ㅇㅇ.
+      str1 = "I'm HATI";
+      // 문자열은 작은따옴표(''), 큰따옴표(""),백틱(``)으로 둘러싼 일련의 문자를 가르킵니다.
+      str1 =
+        "문자열은 작은따옴표(''), 큰따옴표(\"\"),백틱(\`\`)으로 \n\t둘러싼 일련의 문자를 가르킵니다.";
       console.log(str1);
-
-      console.log(`이 문자에서 줄바꿈을
-        표현할 수 있습니다.`); //자바스크립트 코드 삽입 가능
 
       const name2 = "wenive";
       let age = 20;
@@ -57,9 +56,9 @@
       // indexof
       let text2 = "Hello World, Hello Weniv!";
       // "hello"
-      console.log(text2.indexOf("Hello ", 5)); // 13
+      console.log(text2.indexOf("Hello", 5)); // 5이후에 등장하는 hello의 위치값 13
       console.log(text2.indexOf("hello ")); // 값을 찾지 못한경우 -1
-      //lastindexOf
+      //lastindexOf  =  마지막으로 등장하는 위치의 인덱스를 반환합니다.
       console.log(text2.lastIndexOf("Hello")); //13
 
       //includes
@@ -68,6 +67,7 @@
 
       //match - 정규표현식을 사용합니다.
       console.log(text2.match(/[A-Z]/g)); // g전체를 탐색
+      console.log(text2.match(/[a-z]/g)); // g전체를 탐색
 
       //replace
       //찾고자 하는 요소를 찾아 -> 다른값으로 변경
@@ -79,7 +79,7 @@
 
       //subsrting
       //문자열의 특정
-      console.log("\n----- substring-------");
+      console.log("----- substring-------");
       const str = "Hello weniv!";
       console.log(str.substring(6, 11)); //weniv
       console.log(str.substring(6)); //weniv!
@@ -89,9 +89,9 @@
       //시작 인덱스가 종료 인덱스보다 크면 -> 둘이 교체
 
       //slice
-      console.log("\n----- slice-------");
+      console.log("----- slice-------");
       console.log(str.slice(6, 11));
-      console.log(str.slice(-3)); // iv!
+      console.log(str.slice(-3)); // iv! - 맨뒤값이 -1
       console.log(str.slice(5, 3)); // 빈문자열
 
       // substr
@@ -102,27 +102,27 @@
       // split
       console.log("\n----- split-------");
       const number = "010-0000-0000";
-      console.log(number.split("-"));
-      console.log(number.split(""));
-      console.log(number.split("", 5));
+      console.log(number.split("-")); // - 만 뺴고 문자열을 쪼개줌
+      console.log(number.split("")); // 글자 하나하나 전부 쪼개줌
+      console.log(number.split("", 9)); // 글자 하나하나 전부 쪼개는데 9개만 보여줌
 
       //대소문자
-      console.log("Hello World".toLowerCase());
-      console.log("Hello World".toUpperCase());
+      console.log("Hello World".toLowerCase()); // 문자열을 소문자로 변경해서 출력함
+      console.log("Hello World".toUpperCase()); // 문자열을 대문자로 변경해서 출력함
 
       //반복
-      console.log("*".repeat(5));
+      console.log("*".repeat(5)); // 문자열을 반복함 repeat(5)는 앞의 문자열을 5번 반복한다는 의미
 
       //공백 제거
       const trimStr = "               licat         ";
-      console.log(trimStr.trim());
-      console.log(trimStr.trimStart());
-      console.log(trimStr.trimEnd());
+      console.log(trimStr.trim()); // 양쪽의 공백 전부제거
+      console.log(trimStr.trimStart()); // 앞쪽의 공백 제거
+      console.log(trimStr.trimEnd()); // 뒤쪽의 공백 제거
 
       // 자릿수 채우기
-      const month = "7";
-      console.log(month.padStart(2, "0") + "월");
-      console.log("?", month.padEnd(2, "0") + "월");
+      const month = "12";
+      console.log(month.padStart(2, "0") + "월"); // padStart(자릿수," 추가할내용") 추가할내용이 앞쪽에 지정한 자릿수만큼 배치됨
+      console.log("?", month.padEnd(2, "0") + "월"); //추가할내용이 뒤쪽에 지정한 자릿수만큼 배치됨
     </script>
   </body>
 </html>
