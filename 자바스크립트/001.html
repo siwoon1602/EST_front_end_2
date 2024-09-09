@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // 여러개 출력
+      console.log("안녕하세요!");
+      console.log("안녕하세요!, 윤슌입니다!");
+
+      // 여러 타입의 콘솔
+      console.error("에러가 발생하였습니다");
+      console.warn("경고입니다.");
+      console.info("안내메세지입니다.");
+
+      // 표 형태
+      console.table({
+        이름: "위니브",
+        위치: "경기도",
+      });
+
+      // 시간 정보
+      console.time("tick");
+      console.timeEnd("tick");
+
+      // 스타일 적용
+      console.log("%cHello World", "color:pink;  font-size:24px;");
+      console.log(
+        "%cHello %cWorld",
+        "color:pink;  font-size:24px;",
+        "color:royalblue;  font-size:24px;"
+      );
+    </script>
+  </body>
+</html>
