@@ -20,14 +20,13 @@ const phoneNumbers = [
   "010-8765-4321",
 ];
 // 배열에서 전화번호 뒷자리만 출력하기
-const lastDigits = [];
+
 phoneNumbers.forEach((elem, index) => {
   console.log(elem.slice(-4));
-  lastDigits.push(elem.slice(-4));
 });
-console.log(lastDigits);
 
 // map
+console.log("=====map====");
 const mapArr = [1, 2, 3];
 const newArr = mapArr.map(function (elem, index) {
   console.log(elem, index);
@@ -67,7 +66,7 @@ const data = [
   },
 ];
 const ageArray = data.map((elem, index) => {
-  return elem["age"];
+  return elem["name"];
 });
 console.log(ageArray);
 
@@ -91,6 +90,7 @@ const filteredArr = filterArr.filter((elem, index) => {
 console.log(filteredArr);
 
 // reduce
+console.log("====== reduce =====");
 let reduceArr = [1, 2, 3, 4, 5];
 console.log(`\nreduceArr: `, reduceArr);
 
@@ -98,7 +98,7 @@ console.log(
   reduceArr.reduce((a, c) => {
     console.log(`누적값: ${a}, 현재값: ${c}`);
     return a + c; // 10
-  }, 0)
+  })
 );
 
 const mul = reduceArr.reduce((a, c) => {

@@ -36,11 +36,9 @@
       console.log("======== 증감 연산 =======");
       let num = "3";
       console.log(num++); // 다음부터 증가
-      console.log(num);
       console.log(++num); // 바로 증가
 
       console.log("감소" + num--); // 다음부터 감소
-      console.log(num);
       console.log(--num);
       // 앞에오면 전위 / 뒤에오면 후위
 
@@ -120,6 +118,8 @@
       //object.is도 형 변환이 발생 x
 
       console.log("======== Math 객체 =======");
+
+      console.log("Math.PI", Math.PI); // 원주율
       console.log("반올림(3.6)", Math.round(3.6)); // 4
       console.log("반올림(3.4)", Math.round(3.4)); // 3
       console.log("올림(2.4)", Math.ceil(2.4)); // 3
