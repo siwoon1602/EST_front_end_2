@@ -34,7 +34,7 @@ console.log(str, str.length);
 
 arr.length = 2;
 console.log(arr);
-arr.length = 5;
+arr.length = 3;
 console.log(arr);
 
 console.log("==== 다차원 배열 ====");
@@ -62,7 +62,7 @@ console.log(arr6[0][1][0]); // 3
 console.log("===== 배열의 추가 삭제 =====");
 console.log("----- push & pop -----");
 const array = [1, 2, 3, 4, 5];
-array.push(6);
+console.log(array.push(6));
 console.log(array);
 
 console.log("push로 반환되는 값은?", array.push(7, 8, 9)); // 배열의 길이
@@ -105,7 +105,7 @@ const sliceArr = [
   [0, 1, 2],
 ];
 // ['banana', 'cherry']
-console.log(sliceArr.slice(1, 3)); // 시작인덱스 <= 요소 < 종료인덱스
+console.log(sliceArr.slice(2, 4)); // 시작인덱스 <= 요소 < 종료인덱스
 console.log(sliceArr);
 
 // 얕은 복사
@@ -150,7 +150,7 @@ console.log(
 console.log("--- indexOf ---");
 const indexArr = [1, 2, 3, 4, 2, 3, 5, 6];
 console.log(indexArr.indexOf(3)); // 2
-console.log(indexArr.indexOf(3, 5)); // 5
+console.log(indexArr.indexOf(3, 6)); // 5
 console.log(indexArr.indexOf(10)); // -1
 
 console.log("--- includes ---");
