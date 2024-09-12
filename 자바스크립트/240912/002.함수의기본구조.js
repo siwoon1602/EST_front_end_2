@@ -108,3 +108,51 @@ getIdPw(id, pw);
 inputValidation(id, pw);
 sedUserInfo(id, pw);
 redirectMainPage();
+
+// 더하기
+function sum(score1 = 5, score2 = 6) {
+  return score1 + score2;
+}
+console.log(sum());
+
+//빼기
+function sub(score1 = 9, score2 = 2) {
+  return score1 - score2;
+}
+console.log(sub());
+
+//곱하기
+function mul(score1 = 2, score2 = 8) {
+  return score1 * score2;
+}
+console.log(mul());
+//나누기
+function div(score1 = 10, score2 = 2) {
+  return score1 / score2;
+}
+console.log(div());
+
+function calculate(oper, num1, num2) {
+  let result;
+  switch (oper) {
+    case "+":
+      result = num1 + num2;
+      break;
+    case "-":
+      result = num1 + num2;
+      break;
+    case "*":
+      result = num1 + num2;
+      break;
+    case "/":
+      result = num1 + num2;
+      break;
+    default:
+      console.log("연산자가 잘못 입력되었습니다");
+      return;
+  }
+  console.log(`${num1} ${oper} ${num2} = ${result}`);
+  return result;
+}
+
+console.log(calculate("+", 5, 3));
