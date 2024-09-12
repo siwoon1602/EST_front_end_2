@@ -28,8 +28,8 @@ let y = 10;
 console.log(x === y); // x==4 , y ==10
 console.log(x === 4); // true
 console.log(x === "4"); // true
-// 동등 연산에서는 자동 형 변환이 일어난다 -> 값만 비교한다.
 
+// 동등 연산 (==)에서는 자동 형 변환이 일어난다 -> 값만 비교한다.
 console.log(20 == "20"); //true
 console.log(1 == true); //true 불리언값은 0
 console.log(0 == false); //true
