@@ -19,6 +19,9 @@ console.log("=== 값 가져오기 ===");
 console.log(m.get("하나")); // 1
 console.log(m.get(true)); // 참
 
+console.log("=== 값 확인하기 ===");
+console.log(m.has(true));
+
 // 객체 타입을 키 값으로 사용할 때는, 변수에 저장해놓고 쓴다.
 console.log(m.get({ name: "licat", age: 20 })); // undefined
 console.log(m.get(user)); // ceo
