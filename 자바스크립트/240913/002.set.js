@@ -70,3 +70,7 @@ const differenceB = setB.difference(setA); // setB - setA
 console.log(differenceB);
 
 console.log("\n\n\n\n\n\n\n\n\n");
+
+const board = ["라이캣", "라이캣", "라이캣", "빙키", "소울곰", "뮤라"];
+const user = new Set(board);
+console.log(user.size + "명 입니다.");
