@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <div class="”wrap”">
+      <h1>
+        <a href="”#”">HOME</a>
+      </h1>
+      <ul>
+        <li id="ghost">GHOST</li>
+        <li>DRACULAR</li>
+        <li>
+          Horror Movie
+          <a href="”#”">view site</a>
+        </li>
+      </ul>
+      <p>Hello</p>
+    </div>
+    <dl id="list">
+      <dt>keyword</dt>
+      <dd>Description 1</dd>
+      <dd class="apple">Description 2</dd>
+      <dd>Description 3</dd>
+    </dl>
+    <script>
+      const ghost = document.querySelector("#ghost");
+      const a = document.querySelectorAll("a");
+
+      ghost.style.color = "red";
+      a[0].style.color = "green ";
+      a[1].style.color = "orange  ";
+
+      const list = document.getElementById("list");
+      const apple = document.querySelector(".apple");
+      const dd = document.getElementsByTagName("dd");
+      const dd2 = document.querySelectorAll("dd");
+
+      list.style.backgroundColor = "gold";
+      apple.style.fontSize = "50px";
+      dd[0].style.fontStyle = "italic";
+      dd2[2].style.color = "red";
+    </script>
+  </body>
+</html>

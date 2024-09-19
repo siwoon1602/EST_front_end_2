@@ -1,0 +1,57 @@
+a<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .blind {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="”wrap”">
+      <h1>
+        <a href="”#”">HOME</a>
+      </h1>
+      <ul>
+        <li>GHOST</li>
+        <li>DRACULAR</li>
+        <li id="ghost">
+          Horror Movie
+          <a href="”#”">view site</a>
+          <span class="blind">SPAN</span>
+          <span>SPAN TAG</span>
+        </li>
+      </ul>
+      <p>Hello</p>
+    </div>
+
+    <ul class="list">
+      <li>apple</li>
+      <li>mango</li>
+      <li>berry</li>
+    </ul>
+
+    <script>
+      const ghost = document.querySelector("#ghost");
+
+      console.log("innerHTML", ghost.innerHTML);
+      console.log("textContent", ghost.textContent);
+      console.log("innerText", ghost.innerText);
+
+      ghost.addEventListener("click", (event) => {
+        console.log("target :", event.target);
+        console.log("currnetTarget:", event.currentTarget);
+        // ghost.innerHTML = `Hello World <a href=#">LINK</a>`;
+      });
+
+      const list = document.querySelector(".list");
+
+      list.addEventListener("click", (event) => {
+        console.log(event.target.innerHTML);
+      });
+    </script>
+  </body>
+</html>
