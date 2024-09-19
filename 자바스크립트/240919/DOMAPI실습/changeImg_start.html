@@ -22,11 +22,16 @@
     </div>
 
     <script>
-      /* 변수 설정 
-        const imgList = figure밑의 이미지태그들 지정;
-        const view = 큰 이미지 태그 지정;
-        const h1 = h1태그 지정
-        */
+      const imgs = document.querySelectorAll(".imgList img");
+      const h1 = document.querySelector("h1");
+      const p = document.querySelector("p img");
+
+      imgs.forEach((img) => {
+        img.addEventListener("click", (e) => {
+          h1.textContent = e.target.alt;
+          p.src = e.target.src;
+        });
+      });
     </script>
   </body>
 </html>

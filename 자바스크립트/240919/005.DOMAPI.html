@@ -15,9 +15,14 @@
       const btn = document.querySelector("button");
       const msg = document.querySelector(".msg");
       const title = document.querySelector("h1");
+      const img = document.querySelector("img");
 
       btn.addEventListener("click", () => {
         title.textContent = msg.textContent;
+      });
+
+      img.addEventListener("click", () => {
+        title.textContent = img.alt;
       });
     </script>
   </body>
