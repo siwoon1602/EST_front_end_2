@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <h1>TITLE</h1>
+    <img src="./DOMAPI실습/images/bat.jpg" alt="bat illust" />
+    <p class="msg">hello Bat</p>
+    <button type="button">BUTTON</button>
+
+    <script>
+      const btn = document.querySelector("button");
+      const msg = document.querySelector(".msg");
+      const title = document.querySelector("h1");
+
+      btn.addEventListener("click", () => {
+        title.textContent = msg.textContent;
+      });
+    </script>
+  </body>
+</html>
