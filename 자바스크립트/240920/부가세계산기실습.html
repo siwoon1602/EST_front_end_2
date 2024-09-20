@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="./common.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>부가세 계산기</h1>
+      <form name="myForm" class="calulator-vat">
+        <ul class="fmList">
+          <li>
+            <label for="price-total">VAT포함 총액</label>
+            <input
+              type="text"
+              id="price-total"
+              name="total"
+              placeholder="총금액입력"
+            />
+          </li>
+          <li>
+            <label for="price-supply">공급가액</label>
+            <input
+              type="text"
+              id="price-supply"
+              name="supply"
+              placeholder="0"
+              readonly
+            />
+          </li>
+          <li>
+            <label for="price-vat">세액</label>
+            <input
+              type="text"
+              id="price-vat"
+              name="vat"
+              placeholder="0"
+              readonly
+            />
+          </li>
+        </ul>
+
+        <div class="btn-area">
+          <button type="reset">다시쓰기</button>
+          <button type="submit" id="btn">계산하기</button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      const fm = document.forms.myForm;
+
+      const submit = document.querySelector("#btn");
+
+      fm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fm.supply.value = Math.round(fm.total.value * 0.9);
+        fm.vat.value = fm.total.value - fm.supply.value;
+      });
+    </script>
+  </body>
+</html>
