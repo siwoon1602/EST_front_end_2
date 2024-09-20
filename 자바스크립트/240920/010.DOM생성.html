@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Element</h1>
+    <ul class="foodList"></ul>
+    <button type="button" id="btn">li 추가</button>
+
+    <script>
+      const foodList = document.querySelector(".foodList");
+      //요소생성
+      const btn = document.querySelector("#btn");
+
+      btn.addEventListener("click", () => {
+        const li = document.createElement("li");
+        li.textContent = `APPLLE`;
+
+        foodList.appendChild(li);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Element</h1>
+    <ul class="foodList"></ul>
+
+    <script>
+      const foodList = document.querySelector(".foodList");
+      //요소생성
+      const li = document.createElement("li");
+      li.textContent = `APPLLE`;
+      const span = document.createElement("span");
+      span.classList.add("red");
+      span.textContent = "MANGO";
+
+      const img = document.createElement("img");
+      img.src = "../240919/DOMAPI실습/images/witch.jpg";
+
+      // <li>APPLE</li>
+      const strong = document.createElement("strong");
+      strong.textContent = "strong tag";
+
+      li.appendChild(span);
+      li.appendChild(img);
+      li.insertBefore(strong, img);
+      foodList.appendChild(li);
+    </script>
+  </body>
+</html>
