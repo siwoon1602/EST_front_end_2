@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <style>
-      .red {
+      .btn-delete {
         color: white;
         border-radius: 100%;
         text-align: center;
@@ -15,7 +15,7 @@
         padding: 3px 5px;
       }
 
-      .red:hover {
+      .btn-delete:hover {
         background-color: red;
         opacity: 0.5;
         transition: 0.4ms;
@@ -36,12 +36,20 @@
         const li = document.createElement("li");
         li.textContent = input.value;
         const button = document.createElement("button");
-        button.className = "red";
+        button.className = "btn-delete";
         button.textContent = "X";
 
         list.appendChild(li);
         li.appendChild(button);
       });
+      const deleteBtns = document.querySelectorAll(".btn-delete");
+      deleteBtns.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          // this.closest('li').remove();
+          btn.parentElement.remove();
+        });
+      });
+      console.log(deleteBtns);
     </script>
   </body>
 </html>
