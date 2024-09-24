@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // 메뉴 로봇 생성자 함수
+      function MenuRobot(menuArray) {
+        // 랜덤하게 메뉴를 뽑는 메서드
+        this.pickRandomMenu = function () {
+          const randomIndex = Math.floor(Math.random() * menuArray.length);
+          return menuArray[randomIndex];
+        };
+      }
+      // 음식 메뉴 배열
+      const foodMenu = ["Pizza", "Sushi", "Burger", "Pasta", "Salad"];
+
+      // MenuRobot 객체 생성
+      const myMenuRobot = new MenuRobot(foodMenu);
+
+      // 랜덤 메뉴 뽑기
+      console.log(myMenuRobot.pickRandomMenu()); // ex) 'Sushi'
+    </script>
+  </body>
+</html>
