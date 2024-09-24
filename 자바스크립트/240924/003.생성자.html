@@ -7,22 +7,18 @@
   </head>
   <body>
     <script>
-      // 메뉴 로봇 생성자 함수
-      function MenuRobot(menuArray) {
-        // 랜덤하게 메뉴를 뽑는 메서드
-        this.pickRandomMenu = function () {
-          const randomIndex = Math.floor(Math.random() * menuArray.length);
-          return menuArray[randomIndex];
+      function FoodPicker(foodNames) {
+        this.menu = foodNames;
+        this.sayMenu = function () {
+          console.log(
+            `오늘의 메뉴는 ${
+              this.menu[Math.floor(Math.random() * foodNames.length)]
+            } 입니다.`
+          );
         };
       }
-      // 음식 메뉴 배열
-      const foodMenu = ["Pizza", "Sushi", "Burger", "Pasta", "Salad"];
 
-      // MenuRobot 객체 생성
-      const myMenuRobot = new MenuRobot(foodMenu);
-
-      // 랜덤 메뉴 뽑기
-      console.log(myMenuRobot.pickRandomMenu()); // ex) 'Sushi'
+      const robot = new FoodPicker(["짜장면", "고기국수", "몸국"]);
     </script>
   </body>
 </html>
