@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      const me = {
+        name: "윤시운",
+        stack1: "HTML",
+        stack2: "CSS",
+        stack3: "JS",
+        studyOnehour: function () {
+          console.log("공부를 합니다.");
+        },
+        studyJs: function (student) {
+          student.stackUp();
+        },
+      };
+
+      const siwoon = {
+        stackLevel: 1,
+        studyJs: function () {
+          this.stackLevel++;
+        },
+      };
+
+      me.studyJs(siwoon);
+    </script>
+  </body>
+</html>
