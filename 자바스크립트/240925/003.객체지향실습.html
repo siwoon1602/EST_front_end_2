@@ -24,21 +24,37 @@
           this.state = !this.state;
         }
       }
-
+      const todo = new Todo();
       class TodoManager {
         constructor() {
           this.todoList = [];
         }
-        addItem(todo) {
-          this.todoList.push(todo);
+        addItem(value) {
+          const items = new Todo(value);
+          this.todoList.push(items);
         }
         getItems() {
-          return this.todoList;
+          let text = "";
+          this.todoList.forEach((element, index) => {
+            if (!element.state) {
+              text = text + `${index + 1}. ${element.content}`;
+            }
+          });
+          console.log(text);
         }
+
         getLeftTodoCount() {
-          console.log(`남은 todolist는 ${this.todoList.length} 입니다.`);
+          console.log(`남은 todolist는 ${this.todoList.length} 개 입니다.`);
         }
       }
+
+      const todoman = new TodoManager();
+
+      todoman.addItem("밥 먹기");
+      todoman.addItem("씻기");
+      todoman.addItem("잠 자기");
+      todoman.getItems();
+      todoman.getLeftTodoCount();
     </script>
   </body>
 </html>
