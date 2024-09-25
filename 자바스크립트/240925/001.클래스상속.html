@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      //   class Parent {
+      //     constructor() {
+      //       this.name = "시운";
+      //     }
+
+      //     sayName() {
+      //       console.log(this.name);
+      //     }
+      //   }
+
+      //   const a = new Parent();
+
+      //   class Child extends Parent {
+      //     constructor() {
+      //       super();
+      //       this.myName = "조콬";
+      //     }
+      //     sayMyName() {
+      //       this.sayName();
+      //       console.log(this.myName);
+      //     }
+      //   }
+
+      //   const child = new Child();
+      //
+
+      class Creat {
+        constructor(taste1, taste2) {
+          this.tast1 = taste1;
+          this.tast2 = taste2;
+        }
+
+        sayTasteName() {
+          console.log(`와! ${this.tast1} 와 ${this.tast2}맛 이 난다!`);
+        }
+      }
+
+      const soseji = new Creat("소고기", "파");
+
+      class FireSausage extends Creat {
+        sayTasteName() {
+          console.log(
+            `와! ${this.tast1} 와 ${this.tast2}맛 이 불맛과 함께 난다!`
+          );
+        }
+      }
+
+      const fire = new FireSausage("마늘", "양파");
+    </script>
+  </body>
+</html>
