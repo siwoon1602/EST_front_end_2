@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      body {
+        background-color: black;
+      }
+      h1 {
+        color: royalblue;
+        text-align: center;
+      }
+      .box {
+        background-color: royalblue;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Move Cicle</h1>
+    <div class="box"></div>
+
+    <script>
+      const box = document.querySelector(".box");
+
+      let xPosition = 0;
+      let yPosition = 0;
+      let keyState = "";
+
+      document.addEventListener("keydown", move);
+      document.addEventListener("keyup", stop);
+
+      function move(event) {
+        keyState = event.key;
+      }
+
+      function stop() {
+        keyState = null;
+      }
+
+      function play() {
+        switch (keyState) {
+          case "ArrowRight":
+            xPosition += 10;
+            box.style.transform = `translate(${xPosition}px `;
+
+            break;
+          case "ArrowLeft":
+            xPosition -= 10;
+            box.style.transform = `translate(${xPosition}px )`;
+            break;
+        }
+
+        requestAnimationFrame(play);
+      }
+
+      requestAnimationFrame(play);
+    </script>
+  </body>
+</html>
