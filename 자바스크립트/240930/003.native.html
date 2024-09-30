@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <style>
+   .box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #bdbdbd;
+      width: 300px;
+      padding: 30px 0;
+      border-radius: 40px;
+
+   }
+
+   form {
+    display: flex;
+    flex-direction: column;
+    
+   }
+    input {
+      border: 1px solid;
+      border-radius: 10px;
+      width: 200px;
+      height: 25px;
+    }
+
+    .age {
+      width: 40px;
+    }
+
+    .box form input:invalid  {
+      border-color: red;
+    }
+    .box form input:valid {
+      border-color: green;
+    }
+    input:required {
+      border-color: blue;
+    }
+
+
+  </style>
+  <body>
+<div class="box">
+      <h1>로그인</h1>
+    <form id="form">
+        <label for="username"
+          >이름
+          <input type="text" minlength="5" maxlength="10" class="name" required  placeholder="이름을 입력하세요"/> </label
+        ><br />
+        <label for="email ">
+          이메일
+          <input type="email" class="email" required placeholder="이메일을 입력하세요"/> </label
+        ><br />
+        <label for="age ">
+          나이
+          <input type="number" min="18" max="65" class="age" required placeholder="18"/>
+          <button type="submit">제출하기</button>
+    </form>
+      </label>
+</div>
+  </body>
+</html>
