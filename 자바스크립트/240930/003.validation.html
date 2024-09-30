@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      /* input에 입력된 값이 유효할 때 선택하는 선택자. */
+      .text:valid {
+        background-color: teal;
+      }
+      /* input에 입력된 값이 유효하지 않을 때 선택하는 선택자. */
+      .text:invalid {
+        border-color: red;
+      }
+      /* required : 해당 속성이 적용된 요소를 선택. */
+      label:has(.text:required)::after {
+        content: "필수";
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <!-- required  필수입력값 -->
+      <!-- minlength , maxlength="" 텍스트의 데이터 길이 제한 -->
+      <input type="text" minlength="5" maxlength="10" class="text" required />
+      <!-- min , max  숫자의 크기를 제한하는 속성 / step -> 숫자가 상승하는 범위 설정 -->
+      <input type="number" min="5" max="20" step="2" />
+      <button>제출</button>
+    </form>
+  </body>
+</html>
