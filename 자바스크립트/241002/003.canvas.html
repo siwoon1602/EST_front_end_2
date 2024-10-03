@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <canvas></canvas>
+
+    <script>
+      const canvas = document.querySelector("canvas");
+      const ctx = canvas.getContext("2d"); //drawing context를 참조합니다.
+
+      // 상자 만들기
+      // 상자의 색상
+      ctx.fillStyle = "royalblue";
+      //상자 생성
+      // x , y , w , h
+      ctx.fillRect(0, 0, 50, 50);
+      ctx.fillRect(60, 0, 50, 50);
+      ctx.fillRect(120, 0, 50, 50);
+
+      // 직선 그리기
+      ctx.beginPath();
+      // 선의 색상
+      ctx.strokeStyle = "teal";
+      // 선의 두께
+      ctx.lineWidth = 10;
+      // 선의 시작 위치
+      // x , y
+      ctx.moveTo(0, 0);
+      //선의 끝 위치
+      ctx.lineTo(200, 100);
+      // 화면에 선을 그린다.
+      ctx.stroke();
+
+      //원 그리기
+
+      ctx.beginPath();
+      // 3번째 인자 = 50px의 반지름 /   4번째 인자 - 원의 시작각도 , 5번째 - 종료 각도
+      //라디안. 1.라디안 === 반지름과 동일한 길이의 곡선을 그렸을 때 나오는 각도.
+      ctx.arc(60, 60, 50, 0, Math.PI * 2);
+      ctx.strokeStyle = "pink";
+      ctx.lineWidth = 10;
+
+      ctx.stroke();
+      ctx.fillStyle = "pink";
+      ctx.fill();
+    </script>
+  </body>
+</html>

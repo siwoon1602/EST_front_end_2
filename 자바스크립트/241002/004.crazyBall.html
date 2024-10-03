@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <canvas width="500px" height="500px"></canvas>
+
+    <script>
+      const canvas = document.querySelector("canvas");
+      const ctx = canvas.getContext("2d");
+
+      class Ball {
+        constructor(xPos, yPos) {
+          this.xPos = xPos;
+          this.yPos = yPos;
+          this.radius = 30;
+        }
+
+        drawBall() {
+          ctx.beginPath();
+          ctx.arc(this.xPos, this.yPos, this.radius, 0, Math.PI * 2);
+          ctx.fillStyle = "pink";
+          ctx.fill();
+        }
+
+        moveBall() {
+          this.xPos += 3;
+          this.yPos += 3;
+        }
+      }
+
+      const ball1 = new Ball(100, 100);
+
+      const ball2 = new Ball(200, 200);
+
+      const ball3 = new Ball(100, 300);
+
+      function play() {
+        ctx.clearRect(0, 0, 500, 500);
+        ball1.drawBall();
+        ball2.drawBall();
+        ball3.drawBall();
+        ball1.moveBall();
+        ball2.moveBall();
+        ball3.moveBall();
+
+        requestAnimationFrame(play);
+      }
+
+      requestAnimationFrame(play);
+    </script>
+  </body>
+</html>
