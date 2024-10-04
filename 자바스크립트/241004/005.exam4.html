@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore dolores
+      qui autem delectus ex ratione beatae, quibusdam in corporis neque, natus
+      veniam iste possimus consequuntur vero? Minus voluptatum rerum harum!
+      Veritatis dolores provident quod nulla expedita esse dolorum molestias,
+      porro possimus consequuntur eius, atque voluptas odio maxime? Deleniti
+      adipisci excepturi neque quis placeat amet eum eligendi ducimus officiis
+      suscipit nostrum repellendus incidunt quisquam eveniet fugiat voluptas
+      quibusdam et consequatur praesentium, asperiores ab tenetur ut. Rem nam
+      accusamus voluptate ipsa soluta saepe velit, sapiente aperiam nulla
+      possimus nihil ratione distinctio eos quam aspernatur! Perspiciatis sequi
+      tenetur sit facilis minus ipsa recusandae!
+    </p>
+
+    <script>
+      function highlight() {
+        const lorem = document.querySelector("p");
+        const word = lorem.textContent.split(" ");
+
+        const highlight = word.map((word) => {
+          return word.length >= 8
+            ? `<span class="highlight"> ${word}</span>`
+            : word;
+        });
+
+        lorem.innerHTML = highlight.join(" ");
+      }
+
+      highlight();
+    </script>
+  </body>
+</html>
