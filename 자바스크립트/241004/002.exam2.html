@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // 1. 주어진 사용자 배열에서 이름 배열을 얻는 코드를 작성하세요
+      // 2. 활성화된 사용자만 가져오세요
+      // 3. 사용자를 나이 내림차순으로 정렬하세요
+      const users = [
+        {
+          id: 1,
+          name: "재현",
+          isActive: true,
+          age: 20,
+        },
+        {
+          id: 2,
+          name: "호준",
+          isActive: true,
+          age: 18,
+        },
+        {
+          id: 3,
+          name: "유진",
+          isActive: false,
+          age: 30,
+        },
+      ];
+
+      const userName = users.map((name) => {
+        return name.name;
+      });
+      const userActive = users.map((act) => {
+        if (act.isActive === true) {
+          return act.name;
+        }
+      });
+
+      const userAges = users.map((ages) => {
+        return ages.age;
+      });
+
+      console.log(userName);
+      console.log(userActive);
+      console.log(userAges);
+
+      // 답안-----------
+
+      //       const sortedUsers = [...users];
+
+      // for (let i = 0; i < sortedUsers.length - 1; i++) {
+      //     for (let j = 0; j < sortedUsers.length - 1; j++) {
+      //         if (sortedUsers[j].age < sortedUsers[j + 1].age) {
+      //             let temp = sortedUsers[j];
+      //             sortedUsers[j] = sortedUsers[j + 1];
+      //             sortedUsers[j + 1] = temp;
+      //         };
+      //     }
+      // }
+
+      // console.log(sortedUsers);
+
+      // let names = [];
+      // for (let i = 0; i < sortedUsers.length; i++) {
+      //     if (sortedUsers[i].isActive) {
+      //         names.push(sortedUsers[i].name);
+      //     }
+      // }
+
+      // console.log(names);
+    </script>
+  </body>
+</html>
