@@ -48,9 +48,12 @@
 
               return { ...user, ...mappedAddress };
             });
-            console.log(mergedResult);
-            finalResult = mergedResult;
+            return mergedResult;
           });
+        })
+        .then((result) => {
+          console.log(result);
+          return result;
         })
         .catch((error) => {
           console.error(error);
