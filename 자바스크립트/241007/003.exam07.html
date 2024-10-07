@@ -58,6 +58,27 @@
         .catch((error) => {
           console.error(error);
         });
+
+      //promiseall 을 사용하는 예제
+      Promise.all([getUsers(), getUserAddresses()])
+        .then(([users, addresses]) => {
+          const mergedResult = users.map((user) => {
+            const mappedAddress = addresses.find((address) => {
+              return address.id === user.id;
+            });
+
+            return { ...user, ...mappedAddress };
+          });
+
+          return mergedResult;
+        })
+        .then((result) => {
+          console.log(result);
+          return result;
+        })
+        .catch((error) => {
+          console.error(error);
+        });
     </script>
   </body>
 </html>
