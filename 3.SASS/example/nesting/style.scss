@@ -1,0 +1,122 @@
+// nav {
+//   background: #c39bd3;
+//   padding: 10px;
+//   height: 50px;
+//   ul {
+//     display: flex;
+//     list-style: none;
+//     justify-content: flex-end;
+//     font-size: 30px;
+//     li {
+//       color: white;
+//       margin-right: 10px;
+//     }
+//   }
+// }
+.container {
+  background : {
+    image: url("./assets/arrow-right-solid.svg");
+    position: center center;
+    repeat: no-repeat;
+    size: 14px 14px;
+  }
+  nav {
+    display: inline;
+    font-size: 20px;
+    background-color: #c39bd3;
+
+    ul {
+      font-size: 12px;
+      background-color: yellow;
+      padding: 5px;
+      list-style: none;
+
+      li {
+        font-size: 10px;
+        background-color: aquamarine;
+        padding: 5px;
+        list-style-type: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: teal;
+      }
+
+      a:hover {
+        color: red;
+      }
+    }
+  }
+}
+
+//Scss
+ul {
+  li {
+    &:hover {
+      background: white;
+      cursor: pointer;
+      // 가상요소
+    }
+    &:last-child {
+      border-bottom: 2px solid black;
+      // 가상클래스
+    }
+  }
+}
+.state {
+  .alert {
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    &-success {
+      background-color: aqua;
+      color: teal;
+    }
+    &-warning {
+      background-color: red;
+      color: yellow;
+    }
+  }
+}
+//li 태그의 가상요소와 가상클래스에게 스타일을 적용한 예시
+//&을 사용하여 li와 :hover, :last-child를 연결
+
+//Scss
+//@at-root
+.article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  .article-content {
+    font-size: 14px;
+    opacity: 0.7;
+    @at-root i {
+      opacity: 0.5;
+    }
+  }
+}
+
+.wrapper {
+  background-color: #fff;
+  padding: 20px;
+
+  @media (max-width: 700px) {
+    .inner-wrapper {
+      font-size: 12px;
+      .inner-wrapper-content {
+        font-size: 10px;
+      }
+      .inner-wrapper .active {
+        font-size: 14px;
+        @at-root {
+          .mobile-only {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
