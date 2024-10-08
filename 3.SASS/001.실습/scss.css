@@ -22,7 +22,6 @@
   margin-right: auto;
   margin-left: auto;
 }
-
 .container .row {
   display: flex;
   flex-wrap: wrap;
@@ -31,7 +30,7 @@
   flex: 1;
   padding: 15px;
 }
-.container .row .content {
+.container .row .col .content {
   background-color: #f1f1f1;
   padding: 20px;
 }/*# sourceMappingURL=scss.css.map */
