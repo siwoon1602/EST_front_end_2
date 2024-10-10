@@ -14,7 +14,15 @@
       Promise.resolve().then(() => {
         console.log("function3");
       });
+
       console.log("function1");
+
+      //비동기 함수
+
+      // 비동기 함수  -> main -> side (비동기함수가 완료) 결과값이 -> 테스크 큐
+      // 두가지 종류 1. 메크로  2. 마이크로 테스크  순서가 있어요 마이크로 테스크 메크로 읽어요
+      //promise는 마이크로 테스크로  settime아웃이나 콜백 함수들은 -> 메크로
+      //이벤트루프 감시하는놈 callstack 아무것도없다 -> 마이크로테스크 가져오고 ->메크로테스크 가져오고
 
       // callStack
 
