@@ -1,0 +1,46 @@
+//mix -> 두가지 색상을 혼합
+$red: red;
+$blue: blue;
+
+$result: mix($red, $blue, 50%);
+
+.mixed {
+  background-color: $result;
+}
+
+//min , max -> 리스트에서 가장 큰(max) 가장 작은 값을 반환
+$value: 1px 6px 7px 20px 30px 25px 16px;
+
+$maxValue: max($value...);
+
+@debug $maxValue;
+
+//comparable -> 두가지 값이 비교 가능한지 확인해서 불리언값으로 반환
+
+$px-value: 16px;
+$em-value: 3em;
+
+$isComparable: comparable($px-value, $em-value);
+
+@debug $isComparable;
+
+//insert -> 지정한 인덱스값에 원하는 문자열을 넣어서 새로운 문자열로 반환
+
+$origin: "hello";
+$insertied: str-insert($origin, " world", 6);
+
+@debug $insertied;
+
+//variable-exists
+
+$global-val: "hello";
+
+@mixin test {
+  $local-val: "world";
+  @debug variable-exists(global-val);
+  @debug variable-exists(local-val);
+}
+
+.test {
+  @include test;
+}
