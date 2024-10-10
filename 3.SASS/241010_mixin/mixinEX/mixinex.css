@@ -1,7 +1,25 @@
 .responsive-element {
   font-size: 16px;
-  min-width: 600px;
-  max-width: 900px;
-  orientation: landscape;
-  font-size: 18px;
+  padding: 10px;
+}
+@media (min-width: 600px) and (max-width: 900px) and (orientation: landscape) {
+  .responsive-element {
+    font-size: 18px;
+    padding: 15px;
+    background-color: red;
+  }
+}
+@media (min-width: 900px) and (max-width: 1200px) and (orientation: portrait) {
+  .responsive-element {
+    font-size: 25px;
+    padding: 20px;
+    background-color: pink;
+  }
+}
+@media (min-width: 1201px) and (max-width: auto) and (orientation: landscape) {
+  .responsive-element {
+    font-size: 30px;
+    padding: 25px;
+    background-color: orange;
+  }
 }/*# sourceMappingURL=mixinex.css.map */

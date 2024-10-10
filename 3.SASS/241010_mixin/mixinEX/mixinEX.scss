@@ -3,15 +3,28 @@
 //미디어 쿼리의 조건 식에 사용되는 속성은 min-width, max-width, orientation 입니다.
 
 @mixin responsive-styles($minw, $maxw, $ori) {
-  min-width: $minw;
-  max-width: $maxw;
-  orientation: $ori;
-  @content;
+  @media (min-width: $minw) and (max-width: $maxw) and (orientation: $ori) {
+    @content;
+  }
 }
 
 .responsive-element {
   font-size: 16px;
+  padding: 10px;
   @include responsive-styles(600px, 900px, landscape) {
     font-size: 18px;
+    padding: 15px;
+    background-color: red;
+  }
+  @include responsive-styles(900px, 1200px, portrait) {
+    font-size: 25px;
+    padding: 20px;
+    background-color: pink;
+  }
+
+  @include responsive-styles(1201px, auto, landscape) {
+    font-size: 30px;
+    padding: 25px;
+    background-color: orange;
   }
 }
