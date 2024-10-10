@@ -22,7 +22,7 @@
     background-color: pink;
   }
 
-  @include responsive-styles(1201px, auto, landscape) {
+  @include responsive-styles(1201px, 1800px, landscape) {
     font-size: 30px;
     padding: 25px;
     background-color: orange;
