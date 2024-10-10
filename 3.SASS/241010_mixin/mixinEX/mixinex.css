@@ -16,7 +16,7 @@
     background-color: pink;
   }
 }
-@media (min-width: 1201px) and (max-width: auto) and (orientation: landscape) {
+@media (min-width: 1201px) and (max-width: 1800px) and (orientation: landscape) {
   .responsive-element {
     font-size: 30px;
     padding: 25px;
