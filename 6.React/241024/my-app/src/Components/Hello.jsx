@@ -1,6 +1,4 @@
-import "./App.css";
-
-function App() {
+function Hello() {
   const name = "개리";
   const Style = { backgroundColor: "black", color: "white" };
   const today = new Date();
@@ -36,4 +34,4 @@ function App() {
   );
 }
 
-export default App;
+export default Hello;

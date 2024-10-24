@@ -1,31 +1,26 @@
 import React from "react";
+import "./App.css";
 
 const items = [
-  { id: 1, name: 'Apple', desc: '빨간건 사과' },
-  { id: 2, name: 'Banana', desc: '바나나는 길어' },
-  { id: 3, name: 'Cherry', desc: '체리는 비싸' }
+  { id: 1, name: "Apple", desc: "빨간건 사과" },
+  { id: 2, name: "Banana", desc: "바나나는 길어" },
+  { id: 3, name: "Cherry", desc: "체리는 비싸" },
 ];
 
-function Item(props) {
-  return (
-    <dl>{props.data.name}
-    <dt>{props.data.desc}</dt>
-    </dl>
-  );
-    
-}
-
-export default function App2() {
-  const list = items.map((item) => {
-    return <Item key={item.id} data={item} />;
+function DlList() {
+  const listItems = items.map((item) => {
+    return (
+      <div key={item.id}>
+        <dt>{item.name}</dt>
+        <dd>{item.desc}</dd>
+      </div>
+    );
   });
 
-  return (
-    <>
-          {list}
-    </>
-
-
-
-  );
+  return <dl>{listItems}</dl>;
 }
+
+function App() {
+  return <DlList />;
+}
+export default App;
