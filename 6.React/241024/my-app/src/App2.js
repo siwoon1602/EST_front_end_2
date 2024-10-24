@@ -1,4 +1,5 @@
 import React from "react";
+import Resume2 from "./Components/Resume2";
 
 function HelloProps(props) {
   return (
@@ -16,14 +17,17 @@ function HelloProps(props) {
 
 function App2() {
   return (
-    <HelloProps
-      name="jaehyun"
-      age={25}
-      someFunc={() => "awesome!!!"}
-      someJSX={<img src="https://picsum.photos/id/237/200/300" />}
-      someArr={[1, 2, 3]}
-      someObj={{ one: 1 }}
-    />
+    <>
+      <Resume2 />
+      <HelloProps
+        name="jaehyun"
+        age={25}
+        someFunc={() => "awesome!!!"}
+        someJSX={<img src="https://picsum.photos/id/237/200/300" />}
+        someArr={[1, 2, 3]}
+        someObj={{ one: 1 }}
+      />
+    </>
   );
 }
 
