@@ -16,12 +16,20 @@ function App() {
       <p style={Style}>안녕, {name}! 1호</p>
       <p>안녕, {name}! 2호</p>
       <div style={Style}>
-        <p style={{ color: "red" }}>년 : {year}</p>
-        <p>
-          월/일 : {month}/{date}
+        <p style={{ color: "red" }}>
+          년 :<time dateTime={year}> {year}</time>
         </p>
         <p>
-          시간 : {hour}시{min}분{sec}초
+          월/일 :{" "}
+          <time dateTime={month + "-" + date}>
+            {month}/{date}
+          </time>
+        </p>
+        <p>
+          시간 :{" "}
+          <time dateTime={hour + ":" + sec + ":" + min}>
+            {hour}시{min}분{sec}초
+          </time>
         </p>
       </div>
     </div>
