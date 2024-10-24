@@ -15,13 +15,19 @@ function Item(props) {
   );
 }
 
-export default function App3() {
+export default function App2() {
+  const items = list.map((item) => {
+    return <Item key={item.no} data={item} />;
+  });
+
   return (
     <ul className="list-area">
-      <Item data={list[0]} />
+      {/* <Item data={list[0]} />
       <Item data={list[1]} />
       <Item data={list[2]} />
-      <Item data={list[3]} />
+      <Item data={list[3]} /> */}
+
+      {items}
     </ul>
   );
 }
