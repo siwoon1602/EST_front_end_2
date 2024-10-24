@@ -1,21 +1,41 @@
-function Button(props) {
+import React from "react";
+import { useState } from "react";
+
+const feel = [
+  { id: 1, text: "좋아요! 😃" },
+  { id: 2, text: "정말 좋아요! 😚" },
+  { id: 3, text: "최고에요! 😄" },
+  { id: 4, text: "미쳤어요!! 😜" },
+];
+
+export default function BtnList() {
+  let [isGood, setIsGood] = useState("아직 아무것도 선택하지 않았어요.");
+
+  function clickBtn(e) {
+    setIsGood(e.target.textContent);
+  }
+
+  function Display() {
+    return (
+      <div className="displayWrap">
+        <h2>{isGood}</h2>
+      </div>
+    );
+  }
+
+  const fillText = feel.map((item) => {
+    return (
+      <>
+        <button key={item.id} onClick={clickBtn}>
+          기분이: {item.text}
+        </button>
+      </>
+    );
+  });
   return (
     <>
-      <button onClick={() => props.onClick(props.State)}>
-        기분이 : {props.State}{" "}
-      </button>
+      {fillText}
+      <Display />
     </>
   );
 }
-
-function ButtonList({ onButtonClick }) {
-  return (
-    <div className="align">
-      <Button State="좋아요!" onClick={onButtonClick} />
-      <Button State="정말 좋아요!" onClick={onButtonClick} />
-      <Button State="최고에요!" onClick={onButtonClick} />
-      <Button State="미쳤어요!" onClick={onButtonClick} />
-    </div>
-  );
-}
-export default ButtonList;
