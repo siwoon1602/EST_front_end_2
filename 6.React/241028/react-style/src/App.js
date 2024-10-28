@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Exam from "./Components/exam";
 
 const BtnOne = styled.button`
   background-color: royalblue;
@@ -32,6 +33,8 @@ const App = () => {
       <BtnOne>버튼1</BtnOne>
       <BtnTwo>버튼2</BtnTwo>
       <BtnThree>버튼3</BtnThree>
+      <br></br>
+      <Exam></Exam>
     </div>
   );
 };
