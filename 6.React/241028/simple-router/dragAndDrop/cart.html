@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .product {
+        width: 200px;
+        height: 30px;
+        border: 1px solid black;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #cart {
+        width: 200px;
+        height: 500px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>제품 목록</h2>
+    <div id="product-list">
+      <div class="product" draggable="true">상품 1</div>
+      <div class="product" draggable="true">상품 2</div>
+      <div class="product" draggable="true">상품 3</div>
+      <div class="product" draggable="true">상품 4</div>
+    </div>
+
+    <h2>장바구니</h2>
+    <div id="cart">
+      <p>장바구니가 비어 있습니다.</p>
+    </div>
+    <script>
+      const products = document.querySelectorAll("#product-list .product");
+      const dropZone = document.querySelector("#cart");
+
+      products.forEach((product) => {
+        product.addEventListener("dragstart", (event) => {
+          event.dataTransfer.setData("text/plain", product.textContent);
+        });
+      });
+
+      dropZone.addEventListener("dragover", (event) => {
+        event.preventDefault();
+      });
+
+      dropZone.addEventListener("drop", (event) => {
+        const cartText = dropZone.querySelector("p");
+        const text = event.dataTransfer.getData("text/plain");
+        if (cartText.textContent === "장바구니가 비어 있습니다.") {
+          cartText.innerHTML = " ";
+        }
+        dropZone.innerHTML += `<p>${text}</p>`;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .target {
+        width: 50px;
+        height: 50px;
+        background-color: hotpink;
+      }
+
+      .dropZone {
+        margin-top: 100px;
+        width: 300px;
+        height: 300px;
+        background-color: teal;
+      }
+    </style>
+  </head>
+  <body>
+    <div draggable="true" class="target">target</div>
+    <div class="dropZone"></div>
+    <script>
+      const item = document.querySelector(".target");
+      const dropZone = document.querySelector(".dropZone");
+
+      //드래그 시작
+      item.addEventListener("dragstart", (event) => {
+        console.log("drag start");
+        // 2가지 인자를 받음  , 어떤 형식인가 / 전달할 텍스트
+        event.dataTransfer.setData("text/plain", "전달할 텍스트");
+
+        const obj = {
+          id: 1,
+          content: "gggg",
+        };
+
+        event.dataTransfer.setData("application/json", JSON.stringify(obj));
+      });
+      //드래그 중
+      item.addEventListener("drag", () => {
+        console.log("draging....");
+      });
+      //드래그 종료
+      item.addEventListener("dragend", () => {
+        console.log("drag end");
+      });
+
+      // 드래그 존에 진입했을때만 호출
+      dropZone.addEventListener("dragenter", () => {
+        console.log("drag enter!");
+      });
+
+      // 드래그 존에 진입해 있을때 호출
+      dropZone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        console.log("drag enter!");
+      });
+
+      // 드래그 존에서 벗어났을때 호출
+      dropZone.addEventListener("dragleave", () => {
+        console.log("drag leave!");
+      });
+
+      // 드래그 존에 드래그한 요소를 drop했을때 호출 (dragover에 preventDefault 비활성화시 작동x)
+      dropZone.addEventListener("drop", (event) => {
+        console.log("drop!!");
+        const text = event.dataTransfer.getData("text/plain");
+        const textJson = JSON.parse.dataTransfer.getData("application/json");
+        dropZone.textContent = text;
+        console.log(textJson);
+      });
+    </script>
+  </body>
+</html>
