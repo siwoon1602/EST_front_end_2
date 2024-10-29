@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <div class="target">target</div>
+
+    <script>
+      const target = document.querySelector(".target");
+      const options = {
+        root: null,
+        // 기본값은 null (viewport)
+        threshold: 0.2,
+        // 얼마나 겹쳤을때 감지하는가 기본값은 0 ( 0 ~ 1 까지 ) * 0 은 겹치자마자 , 1은 완전히 겹쳤을때
+      };
+      // entry = target
+      const callback = (entry) => {
+        console.log(entry);
+      };
+      const observer = new IntersectionObserver(callback, options);
+
+      observer.observe(target);
+    </script>
+  </body>
+</html>
