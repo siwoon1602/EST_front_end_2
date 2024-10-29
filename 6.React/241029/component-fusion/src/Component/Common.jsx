@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 const ContentH2 = styled.h2`
-  margin: auto;
-  text-align: center;
   max-width: 200px;
+  margin: 0 auto;
+  text-align: center;
 `;
 
 const ContentSection = styled.section`
-  padding: 30px;
+  margin: 30px;
   padding: 20px;
 `;
 

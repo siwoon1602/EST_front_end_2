@@ -1,5 +1,5 @@
-import { ContentH2, ContentSection } from "./Common";
 import styled from "styled-components";
+import { ContentH2, ContentSection } from "./Common";
 
 const ContentH2Border = styled(ContentH2)`
   border: 1px solid black;
@@ -13,10 +13,10 @@ export default function Detail() {
       <ContentH2Border>Detail 페이지</ContentH2Border>
       <ContentSection>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quam
-          consequatur facere sunt sapiente mollitia animi minus sit error sequi
-          eum deserunt, voluptatem quo molestiae neque suscipit ratione earum
-          dignissimos!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vero
+          natus modi neque non illum. Rem vitae velit esse consectetur corrupti
+          blanditiis vel voluptatibus. Incidunt iure magni numquam repudiandae
+          quibusdam!
         </p>
       </ContentSection>
     </>
