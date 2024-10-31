@@ -25,7 +25,7 @@ export default function App() {
     setName(event.target.value);
   };
   const handleIntput2 = (event) => {
-    console.log("렌더링!= 2");
+    console.log("렌더링!= 23");
     setId(event.target.value);
   };
 
