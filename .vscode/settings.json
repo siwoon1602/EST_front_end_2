@@ -1,3 +1,4 @@
 {
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "livePreview.defaultPreviewPath": "/연습장/연습장.html"
 }
