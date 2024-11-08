@@ -7,9 +7,10 @@ export const substractNumber = () => {
 };
 
 const initalState = {
-  stock: 100,
-  goods: 1,
+  stock: 5,
+  goods: 0,
 };
+
 const goodsReducer = (state = initalState, action) => {
   switch (action.type) {
     case "ADD":
@@ -18,12 +19,14 @@ const goodsReducer = (state = initalState, action) => {
         stock: state.stock - 1,
         goods: state.goods + 1,
       };
+
     case "SUBSTRACT":
       return {
         ...state,
         stock: state.stock + 1,
         goods: state.goods - 1,
       };
+
     default:
       return state;
   }
