@@ -1,12 +1,7 @@
 import { plus } from "./plus.js";
+import "./styles.css";
+import android from "./android.png";
 
-console.log(plus(3, 4) + "입니다!");
-// const obj = {};
-
-// // (() => {
-//  export  function plus(a, b) {
-//     return a + b;
-//   }
-
-// //   obj.plus = plus;
-// // })();
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.innerHTML = `<img src="${android}"/>`;
+});
