@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { QuizConfig, QuizQuestion, QuizSummary } from "./types/quiz";
-import QuizSetup from "./components/QuizSetup";
+import { QuizConfig, QuizQuestion, QuizSummary } from "../types/quiz";
+import QuizSetup from "./QuizSetup";
 import { useState } from "react";
-import QuizGame from "./components/QuizGame";
-import QuizResult from "./components/QuizResult";
+import QuizGame from "./QuizGame";
+import QuizResult from "./QuizResult";
 
 // 퀴즈의 진행 단계
 enum QuizStep {

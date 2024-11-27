@@ -36,11 +36,8 @@ export const useSignup = () => {
           });
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
         setIsPending(false);
         setError(error);
-        console.error(errorCode, errorMessage);
       });
   };
 
